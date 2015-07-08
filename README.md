@@ -13,7 +13,13 @@ npm install --save abbreviate
 
 ```js
 abbreviate = require('abbreviate')
-abbr = abbreviate('Some Important String', 8)
+
+// abbreviate(string, opts)
+// opts:
+// length (default 3)
+// keepSeparators (default false) - keeps all separators between words
+// strict (default true) - if false, overwrites length to include all words
+abbr = abbreviate('Some Important String', {length: 8})
 // abbr: 'SmImpStr'
 // which chars will be included for varying length?
 // [S,o ,m,e ,  ,I,m,p,o ,r,t ,a ,n ,t ,  ,S,t,r,i ,n ,g ]
@@ -22,16 +28,12 @@ abbr = abbreviate('Some Important String', 8)
 ## What it does
 In this order:
  - trims the string
- - removes word separators (`/\s\-_,/`)
+ - removes word separators (`/\s\-_,/`) (unless keepSeparators is true)
  - removes lowercase vocals
  - removes lowercase consonants
  - removes uppercase vocals
  - removes uppercase consonants and numbers
  - removes word beginnings (looks for digraphs, trigraphs and blends)
-
-
-## Release History
- - *v0.0.1*: First release
 
 ## License
 Copyright (c) 2015 Paul Pflugradt
