@@ -1,0 +1,39 @@
+{
+  "name": "abbreviate",
+  "description": "abbreviate strings in style of R: Abbreviate",
+  "version": "0.0.1",
+  "homepage": "https://github.com/paulpflug/",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulpflug/abbreviate"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "lib/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "atom-ui-reporter": "0.0.1",
+    "chai": "^3.0.0",
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.3.1"
+  },
+  "keywords": [
+    "atom",
+    "log",
+    "debug"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "clean": "rimraf lib/ && mkdir lib",
+    "test": "mocha",
+    "prebuild": "npm run clean",
+    "build": "coffee --compile --output lib/ src/*.coffee",
+    "watch": "coffee --compile --watch --output lib/ src/*.coffee"
+  }
+}
