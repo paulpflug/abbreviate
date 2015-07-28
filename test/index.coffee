@@ -53,4 +53,4 @@ describe "abbreviate", ->
   describe "with strict", ->
     it "should overwrite length", ->
       abbreviate(str5, length: 1, strict:false).should.equal "W2"
-abbreviate(str5, length: 1, strict:false, keepSeparators:true).should.equal "W _-2"
+      abbreviate(str5, length: 1, strict:false, keepSeparators:true).should.equal "W _-2"

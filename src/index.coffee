@@ -1,5 +1,5 @@
 # out: ../lib/index.js
-regexes = [/[\s\-_,]/,/[\W]/,/[aeouäöü]/,/[a-z]/,/[AEOUÄÖÜ]/,/[A-Z0-9]/]
+regexes = [/[\s\-_,]/,/[\W]/,/[aieouäöü]/,/[a-z]/,/[AIEOUÄÖÜ]/,/[A-Z0-9]/]
 digraphs = ["ch","gh","gn","kn","ph","qu","sh","th","wh","wr"]
 diblends= ["bl","br","cl","cr","fl","fr","gl","gr","pl","pr","sc","sl","sm","sn","sp","st"]
 trigraphs = ["chr","sch"]
